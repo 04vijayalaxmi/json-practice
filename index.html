@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Table</title>
+</head>
+<body>
+    <h2>JSON Data Table</h2>
+    <table id="json-table" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+
+    <script>
+        const data = [
+        { id: 1, name: 'Alice', age: 29 },
+        { id: 2, name: 'Bob', age: 30 },
+        { id: 3, name: 'Charlie', age: 31 }
+    ];
+    
+    const tableBody = document.querySelector('#json-table tbody');
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${item.id}</td><td>${item.name}</td><td>${item.age}</td>`;
+        tableBody.appendChild(row);
+    });
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

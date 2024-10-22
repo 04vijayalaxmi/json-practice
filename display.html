@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display JSON</title>
+</head>
+<body>
+    <h2>JSON Data</h2>
+    <pre id="json-data"></pre>
+    <script>
+        const data = [
+    `{ id: 1, name: 'Alice', age: 29 },
+    { id: 2, name: 'Bob', age: 30 },
+    { id: 3, name: 'Charlie', age: 31 }`
+];
+
+const preElement = document.getElementById('json-data');
+preElement.textContent = JSON.stringify(data, null, 2);
+
+    </script>
+</body>
+</html>
+
